@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+   
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">hyperos moveis</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/home/">home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/produtos/">Produtos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contato/">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+        <h1>Nossos Produtos – Encontre o Móvel Perfeito para Seu Espaço</h1>
+        <p>Bem-vindo à nossa página de produtos! Aqui na [Nome da Sua Empresa], nossa missão é oferecer móveis que não só atendam às suas necessidades, mas que também elevem o estilo e o conforto do seu ambiente. Explore nossa gama diversificada e descubra peças que combinam qualidade, design e funcionalidade.</p>
+        
+        <h2>Categorias de Produtos</h2>
+
+        </p>1. Salas de Estar Transforme sua sala de estar em um espaço de relaxamento e elegância. Escolha entre sofás, poltronas, mesas de centro e estantes que aliam conforto e estilo. Nossos produtos são projetados para criar ambientes acolhedores, perfeitos para relaxar ou receber amigos e familiares. </p>
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpachecos.com%2Finspiracoes%2Fsalas-de-estar%2F&psig=AOvVaw0OFwsnRrC2MZV8jCj5Qtxn&ust=1726233629194000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKiyjM-_vYgDFQAAAAAdAAAAABAJ" alt="">
+        
+        <p>2. Quartos Crie um refúgio pessoal com nossos móveis para quartos. Desde camas e colchões até armários e cômodas, nossa seleção garante conforto e funcionalidade, permitindo que você aproveite ao máximo cada momento de descanso.</p>
+
+        <p>3. Cozinhas e Jantar Envolva-se na arte de cozinhar e receber com nossos móveis para cozinhas e áreas de jantar. Descubra mesas de jantar, cadeiras e armários que combinam design moderno com praticidade, para tornar suas refeições ainda mais especiais.</p>
+
+        <p>4. Escritórios e Home Office Maximize sua produtividade e estilo com nossa linha de móveis para escritório e home office. Oferecemos mesas, cadeiras ergonômicas e estantes que criam um ambiente de trabalho eficiente e agradável.</p>
+
+        <p>5. Exteriores e Varandas Aproveite ao máximo seus espaços externos com nossa seleção de móveis para exteriores. Desde cadeiras e mesas de jardim até espreguiçadeiras, nossos produtos são perfeitos para criar áreas de lazer ao ar livre.</p>
+
+        <h2>Por Que Escolher Nossos Produtos?</h2>
+
+        <p>Qualidade Garantida: Cada item em nossa coleção é selecionado com rigor para garantir que você receba apenas o melhor em termos de durabilidade e acabamento.</p>
+
+        <p>Design Atual: Nossos produtos são projetados para acompanhar as últimas tendências de decoração, oferecendo opções que se adaptam a diversos estilos e preferências.</p>
+
+        <p>Funcionalidade: Além de belos, nossos móveis são criados para oferecer a máxima funcionalidade e conforto, atendendo às suas necessidades diárias.</p>
+
+        <p>Sustentabilidade: Comprometidos com o meio ambiente, trabalhamos com práticas e materiais sustentáveis sempre que possível.</p>
+        <hr>
+        <h2>Encontre o Móvel Ideal para Seu Espaço</h2>
+
+    </h3>navegue pelas nossas categorias e descubra a peça perfeita para transformar sua casa
+            Explore Produtos Nossos e Encontre a Beleza e Conforto Que Seu Espaço Merece! <h3>
+    </div>
+<ul>
+    {% for produto in lista_produtos%}
+
+    <li>{{produto.nome}} - {{produto.descricao}}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
