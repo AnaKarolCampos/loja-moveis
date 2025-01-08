@@ -5,7 +5,7 @@ class Catalogo(models.Model):
     descricao = models.TextField()
     preco = models.DecimalField(max_digits=10, decimal_places=2)
     estoque = models.IntegerField(default=0)
-    imagem = models.ImageField(upload_to='catalogo/')
+    imagem = models.ImageField(upload_to='produtos/')
     ativo = models.BooleanField(default=True)
 
     def __str__(self):
