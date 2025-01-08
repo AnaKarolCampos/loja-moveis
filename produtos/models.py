@@ -6,7 +6,7 @@ class Produto(models.Model):
     categoria = models.TextField(max_length=50)
     preco = models.DecimalField(decimal_places=2, max_digits=8)
     codigo = models.CharField(max_length=5)
-    estoque = models.BooleanField(default=True) # colocar quantidade ao invés de 
+    estoque = models.BooleanField(default=True)
 
     def __str__(self):
         return self.nome
