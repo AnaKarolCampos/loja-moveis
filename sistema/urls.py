@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .views import home, sobre, contato
+from .views import home
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
@@ -7,9 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", home, name='home'),
-    path("sobre/", sobre, name='sobre'),
     path('', include('website.urls')),  # Inclui as rotas de "website"
-    path("contato/", contato, name='contato'),
 ]
 
 if settings.DEBUG:

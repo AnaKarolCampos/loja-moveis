@@ -5,9 +5,3 @@ def home(request):
 
 def catalogo(request):
     return render(request, 'catalogo.html')
-
-def sobre(request):
-    return render(request, 'sobre.html')
-
-def contato(request):
-    return render(request, 'contato.html')
