@@ -19,18 +19,27 @@
         </div>
     </nav>
     <div class="container mt-5">
-        <h2>Catálogo de Produtos</h2>
         <div class="row">
-            {% for produto in produtos %}
+            {% for catalogo in catalogos %}
+                <h2>{{catalogo.nome}}</h2>
+                <h3>{{catalogo.descricao}}</h3>
+                {% for produto in catalogo.produtos.all %}
+                   
+
+
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="{{ produto.imagem.url }}" class="card-img-top" alt="{{ produto.nome }}">
+                        <img src="{{ produto.foto.url }}" class="card-img-top" alt="{{ produto.nome }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ produto.nome }}</h5>
                             <h2 class="card-text">R${{ produto.preco }}</h2>
                         </div>
                     </div>
                 </div>
+
+
+                {% endfor %}
+
             {% empty %}
                 <p>Nenhum produto encontrado.</p>
             {% endfor %}

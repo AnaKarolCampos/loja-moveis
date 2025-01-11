@@ -7,6 +7,18 @@ class Produto(models.Model):
     preco = models.DecimalField(decimal_places=2, max_digits=8)
     codigo = models.CharField(max_length=5)
     estoque = models.BooleanField(default=True)
+    foto = models.ImageField(upload_to='produtos/')
 
     def __str__(self):
         return self.nome
+    
+class Catalogo(models.Model):
+    nome = models.CharField(max_length=200)
+    descricao = models.TextField()
+    imagem = models.ImageField(upload_to='catalogos/')
+    ativo = models.BooleanField(default=True)
+    produtos = models.ManyToManyField(Produto)
+
+    def __str__(self):
+        return self.nome
+    

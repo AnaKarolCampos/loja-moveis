@@ -1,6 +1,7 @@
+from django.contrib import admin
 from django.urls import path
-from .views import catalogo
+from .views import home
 
 urlpatterns = [
-    path('catalogo/', catalogo, name='catalogo'),
+    path('', home, name="home"),
 ]
