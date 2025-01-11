@@ -8,14 +8,3 @@ class Cliente(models.Model):
 
     def str(self):
         return self.nome
-
-class Vendas(models.Model):
-    descricao = models.CharField(max_length=255)
-    preco = models.DecimalField(max_digits=10, decimal_places=2)
-    data_venda = models.DateField()
-    
-
-    def str(self):
-        return self.descricao
-
-# Create your models here.

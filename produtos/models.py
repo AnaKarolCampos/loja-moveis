@@ -22,3 +22,17 @@ class Catalogo(models.Model):
     def __str__(self):
         return self.nome
     
+class Vendas(models.Model):
+    codigo =  models.CharField(max_length=5)
+    preco = models.DecimalField(max_digits=10, decimal_places=2)
+    data_venda = models.DateField()
+    produtos = models.ManyToManyField(Produto)
+    
+
+    def str(self):
+        return ''
+
+
+# Venda tem que ter o campo total, que tem que ser calculado na hora que a venda for salva
+# categoria de produtos tem que ser uma lista para escolher
+# cliente tem que ser linkado na venda, desce o model de cliente para a app produtos e linka no model de vendas com campo tipo ForeingKey
