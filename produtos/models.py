@@ -22,7 +22,7 @@ class Catalogo(models.Model):
     def __str__(self):
         return self.nome
     
-class Vendas(models.Model):
+class Venda(models.Model):
     codigo =  models.CharField(max_length=5)
     preco = models.DecimalField(max_digits=10, decimal_places=2)
     data_venda = models.DateField()
