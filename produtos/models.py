@@ -12,6 +12,15 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Cliente(models.Model):
+    nome = models.CharField(max_length=100)
+    email = models.EmailField()
+    telefone = models.CharField(max_length=15)
+    endereco = models.TextField()
+
+    def __str__(self):
+        return self.nome
     
 class Catalogo(models.Model):
     nome = models.CharField(max_length=200)
@@ -26,17 +35,16 @@ class Catalogo(models.Model):
 class Venda(models.Model):
     codigo = models.CharField(max_length=5)
     data = models.DateField(auto_now_add=True)
-    produtos = models.ManyToManyField(Produto)
-    total = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    cliente = models.ForeignKey('Cliente', on_delete=models.CASCADE, null=True)  # Referência ao cliente
+    produtos = models.ManyToManyField('Produto')  # Relação muitos-para-muitos com Produto
+    total = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)  # Campo para armazenar o total da venda
 
     def __str__(self):
         return f"Venda {self.codigo} - {self.data} - Total: R${self.total}"
 
-# Sinal para atualizar o total sempre que produtos forem adicionados/removidos
+# Sinal para atualizar o total da venda quando produtos forem adicionados/removidos
 @receiver(m2m_changed, sender=Venda.produtos.through)
 def atualizar_total_venda(sender, instance, action, **kwargs):
     if action in ["post_add", "post_remove", "post_clear"]:  # Após adicionar/remover produtos
         instance.total = sum(produto.preco for produto in instance.produtos.all())
         instance.save()
-
-# cliente tem que ser linkado na venda, desce o model de cliente para a app produtos e linka no model de vendas com campo tipo ForeingKey
