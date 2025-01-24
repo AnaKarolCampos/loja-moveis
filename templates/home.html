@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - PrimeCasa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
 </head>
 <body class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <button type="button" class="btn btn-secondary"><a class="navbar-brand" href="/">PrimeCasa</a></button>
-                <button type="button" class="btn btn-secondary"><li class="nav-item"><a class="nav-link" href="/catalogo/">Catálogo</a></li></button>
-            </ul>
-        </div>
+    <nav id="n1">
+        <a href="/">PrimeCasa</a>
+        <a href="/catalogo/">Catálogo</a>
+       
     </nav>
 
-    <div class="container mt-5">
-        <h1>Bem-vindo à PrimeCasa</h1>
+
+    <div class="container mt-5" id="d1">
+        <strong><h1>Bem-vindo à PrimeCasa</h1></strong>
+        
         <p class="lead">
             Bem-vindo à PrimeCasa, onde estilo, tecnologia e funcionalidade se encontram! Somos uma loja moderna e completa,
             especializada em móveis elegantes e eletrodomésticos de última geração, oferecendo produtos de alta qualidade das
@@ -40,3 +40,133 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<style>
+    body {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+    }
+
+    li{
+        text-align: center;
+    }
+
+    #d1{
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        
+        border-radius:20px ;
+    }
+
+    a{
+        
+        height: 500px;
+        background-color: #084475;
+        color: white;
+
+    }
+
+    #n1{
+        
+        
+       
+        height: 700px;
+        color: white;
+     
+    }
+    
+    
+
+    
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+/*
+#83E1AD
+#3DDC84
+#2FA866
+#1A5C37
+#063D1E
+*/
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+   --cor0: black;
+   --cor1: #83E1AD;
+   --cor2: #3DDC84;
+   --cor3: #4DCEEB;
+   --cor4: #4D6AEB;
+   --cor5: #4D9CEB;
+
+   --fonte-padrão: Arial, verdana, helvetica, sans-serif;
+   --fonte-destaque: "bebas Neue", cursive;
+
+}
+body{
+background: linear-gradient(top, #084475, white, white );
+font-family: var(--fonte-padrão);
+}
+p{
+    padding: 15px 0px;
+}
+
+
+nav{
+    background-color: white;
+    color: white;
+    padding: 10px;
+    height: 2000;
+
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0,5s;
+}
+
+
+
+main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+
+footer{
+    
+    color:#084475;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.8em;
+}
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+</style>
