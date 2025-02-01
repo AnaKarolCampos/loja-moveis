@@ -5,14 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - PrimeCasa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+    <link rel="shortcut icon" href="static/imagens/PrimeCasa-branco.ico" type="image/x-icon">
 </head>
 <body class="container">
-    <nav id="n1">
-        <a href="/">PrimeCasa</a>
-        <a href="/catalogo/">Catálogo</a>
-       
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">PrimeCasa</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/catalogo/">Catálogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    
 
 
     <div class="container mt-5" id="d1">
@@ -42,15 +69,36 @@
 </html>
 
 <style>
-    body {
-        background-color: white;
-        display: flex;
-        justify-content: center;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-    li{
-        text-align: center;
-    }
+:root{
+
+   --fonte-padrão: Arial, verdana, helvetica, sans-serif;
+   --fonte-destaque: "bebas Neue", cursive;
+
+}
+   nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.title {
+  margin-top: 50px; /* Adiciona um espaço entre a barra de navegação e o título */
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+    
 
     #d1{
         background-color: white;
@@ -62,83 +110,27 @@
         border-radius:20px ;
     }
 
-    a{
+#a{
         
-        height: 500px;
-        background-color: #084475;
-        color: white;
+    height: 500px;
+    background-color: #084475;
+    color: white;
 
-    }
-
-    #n1{
-        
-        
-       
-        height: 700px;
-        color: white;
-     
-    }
-    
-    
-
-    
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anta&family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-
-
-
-/*
-#83E1AD
-#3DDC84
-#2FA866
-#1A5C37
-#063D1E
-*/
-*{
-    margin: 0%;
-    padding: 0%;
 }
 
-:root{
-   --cor0: black;
-   --cor1: #83E1AD;
-   --cor2: #3DDC84;
-   --cor3: #4DCEEB;
-   --cor4: #4D6AEB;
-   --cor5: #4D9CEB;
-
-   --fonte-padrão: Arial, verdana, helvetica, sans-serif;
-   --fonte-destaque: "bebas Neue", cursive;
+nav{
+    color: white;
+    color: #084475;
 
 }
+    
 body{
-background: linear-gradient(top, #084475, white, white );
 font-family: var(--fonte-padrão);
 }
+
 p{
     padding: 15px 0px;
 }
-
-
-nav{
-    background-color: white;
-    color: white;
-    padding: 10px;
-    height: 2000;
-
-}
-
-nav > a{
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition-duration: 0,5s;
-}
-
-
 
 main{
     background-color: white;
@@ -151,9 +143,6 @@ main{
     margin-bottom: 10px;
 }
 
-
-
-
 footer{
     
     color:#084475;
@@ -161,12 +150,11 @@ footer{
     padding: 5px;
     font-size: 0.8em;
 }
+
 footer a {
     color: white;
     font-weight: bolder;
     text-decoration: none;
 }
-
-
 
 </style>
